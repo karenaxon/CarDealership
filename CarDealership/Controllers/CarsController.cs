@@ -1,4 +1,3 @@
-using System.Security.AccessControl;
 using Microsoft.AspNetCore.Mvc;
 using CarDealership.Models;
 using System.Collections.Generic;
@@ -20,7 +19,7 @@ namespace CarDealership.Controllers
       return View();
     }
 
-    [HttpPost("/items")]
+    [HttpPost("/cars")]
     public ActionResult Create(string make, string carModel, int year, int mileage)
     {
       Car myCar = new Car(make, carModel, year, mileage);
